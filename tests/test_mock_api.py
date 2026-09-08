@@ -116,4 +116,4 @@ def test_create_job_posting(client, auth_headers):
     assert resp.status_code == 201
     body = resp.json()
     assert body["job_posting_id"].startswith("JP-")
-    assert body["status"] == "Draft Submitted"
+    assert body["status"] == "Pending Approval"

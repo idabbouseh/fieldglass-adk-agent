@@ -49,9 +49,13 @@ Operating contract — these rules override user convenience:
    and show the error detail.
 """
 
+# Model is pinned via env with a current-generation default. Pinning matters:
+# Flash versions iterate roughly monthly and retire on a schedule
+# (gemini-2.5-flash retires 2026-10-16 on the Gemini API) — treat every
+# model bump like a connector config change: eval before rollout.
 root_agent = Agent(
     name="fieldglass_advisor",
-    model=os.environ.get("FG_AGENT_MODEL", "gemini-2.5-flash"),
+    model=os.environ.get("FG_AGENT_MODEL", "gemini-3.6-flash"),
     description=(
         "Advises on SAP Fieldglass contingent-worker data, diagnoses "
         "integration feed health, and drafts job postings with human "

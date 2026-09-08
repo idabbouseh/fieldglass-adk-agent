@@ -114,7 +114,7 @@ class JobPostingIn(BaseModel):
 def create_job_posting(body: JobPostingIn):
     posting = {
         "job_posting_id": f"JP-{9000 + len(data.JOB_POSTINGS) + 1}",
-        "status": "Draft Submitted",
+        "status": "Pending Approval",  # real FG postings enter an approval chain
         **body.model_dump(),
     }
     data.JOB_POSTINGS.append(posting)
