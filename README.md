@@ -1,5 +1,9 @@
 # Fieldglass Advisor — an ADK agent against an enterprise-shaped API
 
+[![tests](https://github.com/idabbouseh/fieldglass-adk-agent/actions/workflows/tests.yml/badge.svg)](https://github.com/idabbouseh/fieldglass-adk-agent/actions/workflows/tests.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
+
 A working Google **Agent Development Kit (ADK)** agent that operates a
 mock **SAP Fieldglass** vendor-management API the way a production
 integration does: OAuth 2.0 client_credentials with token caching and
