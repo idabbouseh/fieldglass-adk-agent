@@ -1,0 +1,7 @@
+[tool.pytest.ini_options]
+# The packages live at the repo root (fieldglass_agent/, mock_fieldglass/) rather
+# than under src/, and the suite is run without installing the project. Without
+# this, `pytest` resolves sys.path from tests/ and cannot import either package —
+# it only appeared to work locally under `python -m pytest`, which adds the CWD.
+pythonpath = ["."]
+testpaths = ["tests"]
